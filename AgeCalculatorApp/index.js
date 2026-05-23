@@ -19,7 +19,7 @@ const todayYear = today.getFullYear();
 const todayMonth = today.getMonth() + 1;
 const todayDay = today.getDate();
 
-let age = JSON.parse(localStorage.getItem('age'));
+const age = JSON.parse(localStorage.getItem('age'));
 
 function declareError(e) {
   e.classList.add('error'); 
