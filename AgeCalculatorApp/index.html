@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Age Calculator | OriginB</title>
+</head>
+<body>
+  <main>
+    <form>
+      <p>
+        <label for="day">Day</label>
+        <input type="text" name="day" placeholder="DD" aria-label="Write The Day Here" id="day">
+        <span class="day"></span>
+      </p>
+      <p>
+        <label for="month">Month</label>
+        <input type="text" name="month" placeholder="MM" aria-label="Write The Month Here" id="month">
+        <span class="month"></span>
+      </p>
+      <p>
+        <label for="year">Year</label>
+        <input type="text" name="year" placeholder="YYYY" aria-label="Write The Year Here" id="year">
+        <span class="year"></span>
+      </p>
+      <button type="button" aria-label="Click To Know How Old Are You" id="generate">
+        <img src="images/icon-arrow.svg" alt="icon arrow">
+      </button>
+    </form>
+    <section class="show-age">
+      <p><span class="color" id="show-years">- -</span> years</p>
+      <p><span class="color" id="show-months">- -</span> months</p>
+      <p><span class="color" id="show-days">- -</span> days</p>
+    </section>
+  </main>
+  <footer class="attribution">
+    <img src="images/Logo.jpeg" alt="OriginB Official Logo">
+    <p>Coded by <a href="https://github.com/Origin-B" target="_blank">OriginB</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>
