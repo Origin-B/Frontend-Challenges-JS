@@ -45,6 +45,10 @@ function checkInputValue(birthD,birthM,birthY){
       document.querySelector(`.${e.getAttribute('name')}`).textContent = `It must be a number`
       declareError(e);
       valid = false;
+    }else if(/^[0]+$/.test(e.value)){
+      document.querySelector(`.${e.getAttribute('name')}`).textContent = `It must be a valid number`
+      declareError(e);
+      valid = false;
     }else if (e === dayInp && (/^\d{1,2}$/.test(dayInp.value) == false || birthD > dayNum)){
       dayWarn.textContent = `It must be a valid day`
       declareError(e)
