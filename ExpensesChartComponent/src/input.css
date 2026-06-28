@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+
+@theme{
+--color-Red-500: hsl(10, 79%, 65%);
+--color-Blue-300: hsl(186, 34%, 65%);
+--color-Brown-950: hsl(25, 47%, 15%);
+--color-Brown-400: hsl(28, 10%, 53%);
+--color-Red-100: hsl(26, 66%, 93%);
+--font-dm: "DM Sans", sans-serif;
+--breakpoint-sm: 400px
+}

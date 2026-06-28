@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+@variant dark (&:where(.dark, .dark *));
+
+@theme{
+  --font-noto-sans:"Noto Sans", sans-serif;
+  --color-Red-400: hsl(3, 86%, 64%);
+  --color-Red-500: hsl(3, 71%, 56%);
+  --color-Red-700: hsl(3, 77%, 44%);
+  --color-N-900: hsl(227, 75%, 14%);
+  --color-N-800: hsl(226, 25%, 17%);
+  --color-N-700: hsl(225, 23%, 24%);
+  --color-N-600: hsl(226, 11%, 37%);
+  --color-N-300: hsl(0, 0%, 78%);
+  --color-N-200: hsl(217, 61%, 90%);
+  --color-N-100: hsl(0, 0%, 93%);
+  --color-N-0: hsl(200, 60%, 99%);
+  --breakpoint-sm: 650px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --spacing-padding: 8px 16px
+}
+
+@utility act-filter{
+  @apply rounded-4xl text-xl cursor-pointer transition shadow-[1px_0_2px_1px_hsl(227deg_75%_14%_/20%)] bg-Red-700 text-N-0 hover:bg-Red-500 hover:border focus:outline-2 focus:border-2
+  focus:border-N-0 focus:outline-Red-700 dark:text-N-900 dark:bg-Red-500 dark:hover:bg-Red-400  dark:focus:outline-2 dark:focus:outline-Red-400;
+}
+@utility inactive-filter{
+  @apply rounded-4xl text-xl text-N-900 bg-N-0 cursor-pointer transition shadow-[1px_0_2px_1px_hsl(227deg_75%_14%_/20%)] hover:text-N-600 hover:bg-N-100 dark:border-2 dark:border-N-600 dark:text-N-0 dark:hover:text-N-0 dark:bg-N-700 dark:hover:bg-N-600 dark:focus:bg-N-600 focus:outline-2 focus:outline-Red-700;
+}
+
+@utility inactive-btn{
+  @apply bg-N-300 focus:border-2 focus:border-N-0 focus:outline-2 focus:outline-Red-400 dark:bg-N-600 dark:focus:outline-2 dark:focus:outline-Red-700 dark:border-2 dark:border-N-600;
+}
+@utility active-btn{
+  @apply justify-end bg-Red-700 hover:bg-Red-500 focus:border-2 focus:border-N-0 focus:outline-2 focus:outline-Red-500 dark:bg-Red-500 dark:hover:bg-Red-400 dark:focus:border-2 dark:focus:border-N-0 dark:focus:outline-2 dark:focus:outline-Red-500 dark:focus:bg-Red-500;
+}

@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+@theme{
+--color-b-Green-400: hsl(172, 67%, 45%);
+--color-b-Green-900: hsl(183, 100%, 15%);;
+--color-b-Grey-500: hsl(186, 14%, 43%);
+--color-b-Grey-400: hsl(184, 14%, 56%);
+--color-b-Grey-200: hsl(185, 41%, 84%);
+--color-b-Grey-50: hsl(189, 47%, 97%);
+--color-b-White: hsl(0, 100%, 100%);
+--font-SpaceMono: "Space Mono", monospace;
+}
+
+/* *{
+  outline: red solid 2px;
+} */
+
+@utility active-select{
+  @apply bg-b-Green-400 text-b-Green-900;
+}

@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+@theme{
+--color-b-Soft-orange: hsl(35, 77%, 62%);
+--color-b-Soft-red: hsl(5, 85%, 63%);
+--color-b-Off-white: hsl(36, 100%, 99%);
+--color-b-Grayish-blue: hsl(233, 8%, 79%);
+--color-b-Dark-grayish-blue: hsl(236, 13%, 42%);
+--color-b-Very-dark-blue: hsl(240, 100%, 5%);
+--font-inter:"Inter", sans-serif;
+--breakpoint-sm: 650px;
+--breakpoint-md: 1024px;
+}
+
+@utility active{
+  @apply h-full w-2/3 fixed top-0 right-0 flex p-6 flex-col gap-10 text-b-Very-dark-blue bg-b-Off-white;
+}
+@utility overlay{
+  @apply h-full block fixed inset-0 bg-b-Very-dark-blue/50;
+}

@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-League: "League Spartan", sans-serif;
+  --color-C-mainBg: var(--main-bg);
+  --color-C-mainText: var(--main-text);
+  --color-C-kPTog: var(--keypad-bg);
+  --color-C-screen: var(--screen-bg);
+
+  --color-C-KeT: var(--key-text);
+  --color-C-mainKeBg: var(--main-kBg);
+  --color-C-mainKeSd: var(--main-kSd);
+
+  --color-C-eqTo-KeBg: var(--eqTo-kBg);
+  --color-C-eqTo-KeSd: var(--eqTo-key-sd);
+  --color-C-eq-text: var(--eq-text);
+
+  --color-C-deleRes-KeBg: var(--deleRes-kBg);
+  --color-C-deleRes-KeSd: var(--deleRes-kSd);
+  --color-C-deleRes-text: var(--deleRes-text);
+}
+
+:root,
+.theme-1 {
+  --main-bg: hsl(222, 26%, 31%);
+  --main-text: hsl(0, 100%, 100%);
+  --keypad-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
+
+  --key-text: hsl(221, 14%, 31%);
+  --main-kBg: hsl(30, 25%, 89%);
+  --main-kSd: hsl(28, 16%, 65%);
+
+  --eqTo-kBg: hsl(6, 63%, 50%);
+  --eqTo-key-sd: hsl(6, 70%, 34%);
+  --eq-text: hsl(0, 100%, 100%);
+
+  --deleRes-kBg: hsl(225, 21%, 49%);
+  --deleRes-kSd: hsl(224, 28%, 35%);
+  --deleRes-text: hsl(0, 100%, 100%);
+}
+
+.theme-2 {
+  --main-bg: hsl(0, 0%, 90%);
+  --main-text: hsl(60, 10%, 19%);
+  --keypad-bg: hsl(0, 5%, 81%);
+  --screen-bg: hsl(0, 0%, 93%);
+
+  --key-text: hsl(60, 10%, 19%);
+  --main-kBg: hsl(45, 7%, 89%);
+  --main-kSd: hsl(35, 11%, 61%);
+
+  --eqTo-kBg: hsl(25, 98%, 40%);
+  --eqTo-key-sd: hsl(25, 99%, 27%);
+  --eq-text: hsl(0, 100%, 100%);
+
+  --deleRes-kBg: hsl(185, 42%, 37%);
+  --deleRes-kSd: hsl(185, 58%, 25%);
+  --deleRes-text: hsl(0, 100%, 100%);
+}
+
+.theme-3 {
+  --main-bg: hsl(268, 75%, 9%);
+  --main-text: hsl(52, 100%, 62%);
+  --keypad-bg: hsl(268, 71%, 12%);
+  --screen-bg: hsl(268, 71%, 12%);
+
+  --key-text: hsl(52, 100%, 62%);
+  --main-kBg: hsl(268, 47%, 21%);
+  --main-kSd: hsl(290, 70%, 36%);
+
+  --eqTo-kBg: hsl(176, 100%, 44%);
+  --eqTo-key-sd: hsl(177, 92%, 70%);
+  --eq-text: hsl(198, 20%, 13%);
+
+  --deleRes-kBg: hsl(281, 89%, 26%);
+  --deleRes-kSd: hsl(285, 91%, 52%);
+  --deleRes-text: hsl(0, 100%, 100%);
+}

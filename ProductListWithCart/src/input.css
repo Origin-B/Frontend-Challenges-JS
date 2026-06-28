@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+@theme{
+--color-b-Red: hsl(14, 86%, 42%);
+--color-b-Green: hsl(159, 69%, 38%);
+--color-b-Rose-50: hsl(20, 50%, 98%);
+--color-b-Rose-100: hsl(13, 31%, 94%);
+--color-b-Rose-300: hsl(14, 25%, 72%);
+--color-b-Rose-400: hsl(7, 20%, 60%);
+--color-b-Rose-500: hsl(12, 20%, 44%);
+--color-b-Rose-900: hsl(14, 65%, 9%);
+--font-redhat: "Red Hat Text", sans-serif;
+}
