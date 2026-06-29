@@ -193,18 +193,6 @@
   .relative {
     position: relative;
   }
-  .inset-0 {
-    inset: calc(var(--spacing) * 0);
-  }
-  .top-0 {
-    top: calc(var(--spacing) * 0);
-  }
-  .top-17 {
-    top: calc(var(--spacing) * 17);
-  }
-  .top-17\.5 {
-    top: calc(var(--spacing) * 17.5);
-  }
   .top-18 {
     top: calc(var(--spacing) * 18);
   }
@@ -377,12 +365,6 @@
   .bg-neutral-950 {
     background-color: var(--color-neutral-950);
   }
-  .bg-neutral-950\/50 {
-    background-color: color-mix(in srgb, oklch(14.5% 0 0) 50%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-neutral-950) 50%, transparent);
-    }
-  }
   .bg-neutral-950\/90 {
     background-color: color-mix(in srgb, oklch(14.5% 0 0) 90%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -396,8 +378,14 @@
     }
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
+  .bg-\[url\(\'\.\/src\/images\/bg-intro-mobile\.svg\'\)\] {
+    background-image: url('./src/images/bg-intro-mobile.svg');
+  }
   .bg-\[url\(\'images\/bg-intro-mobile\.svg\'\)\] {
     background-image: url('images/bg-intro-mobile.svg');
+  }
+  .bg-\[url\(\'src\/images\/bg-intro-mobile\.svg\'\)\] {
+    background-image: url('src/images/bg-intro-mobile.svg');
   }
   .from-brand-cyan-400 {
     --tw-gradient-from: var(--color-brand-cyan-400);
@@ -485,9 +473,6 @@
   }
   .underline {
     text-decoration-line: underline;
-  }
-  .opacity-20 {
-    opacity: 20%;
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -627,11 +612,6 @@
       max-width: calc(1 / 2 * 100%);
     }
   }
-  .md\:max-w-1\/4 {
-    @media (width >= 768px) {
-      max-width: calc(1 / 4 * 100%);
-    }
-  }
   .md\:translate-y-10 {
     @media (width >= 768px) {
       --tw-translate-y: calc(var(--spacing) * 10);
@@ -693,9 +673,19 @@
       background-color: transparent;
     }
   }
+  .md\:bg-\[url\(\'\.\/src\/images\/bg-intro-desktop\.svg\'\)\] {
+    @media (width >= 768px) {
+      background-image: url('./src/images/bg-intro-desktop.svg');
+    }
+  }
   .md\:bg-\[url\(\'images\/bg-intro-desktop\.svg\'\)\] {
     @media (width >= 768px) {
       background-image: url('images/bg-intro-desktop.svg');
+    }
+  }
+  .md\:bg-\[url\(\'src\/images\/bg-intro-desktop\.svg\'\)\] {
+    @media (width >= 768px) {
+      background-image: url('src/images/bg-intro-desktop.svg');
     }
   }
   .md\:text-left {
