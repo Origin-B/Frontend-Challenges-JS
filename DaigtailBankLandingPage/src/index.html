@@ -12,10 +12,10 @@
 </head>
 
 <body class="min-h-screen flex flex-col font-public-sans font-light capitalize text-brand-gray-600">
-  <header class="w-full relative flex justify-between items-center p-6 bg-brand-gray-50 md:justify-evenly">
+  <header class="w-full relative flex justify-between items-center p-6 bg-brand-gray-50 md:justify-evenly" role="banner">
     <div class="hidden w-screen h-screen absolute left-0 top-18.25 bg-neutral-950/90" id="overlay"></div>
     <img src="images/logo-dark.svg" alt="Digital Bank Logo">
-    <nav class="z-1">
+    <nav class="z-1" role="navigation">
       <ul
         class="w-4/5 hidden p-8 absolute top-24 left-[10%] -z-1 flex-col items-center gap-8 text-brand-blue-950 bg-brand-white md:static md:flex md:flex-row md:items-center md:gap-4 md:font-bold md:bg-transparent md:text-brand-gray-600"
         id="navbar">
@@ -60,7 +60,7 @@
       Request Invite
     </button>
   </header>
-  <main class="w-full overflow-hidden flex flex-col items-center">
+  <main class="w-full overflow-hidden flex flex-col items-center" role="main">
     <section class="w-full flex flex-col justify-center items-center md:flex-row-reverse">
       <img src="images/image-mockups.png" alt="app mockup"
         class="-mt-26 container bg-[url('images/bg-intro-mobile.svg')] bg-center bg-cover bg-no-repeat md:bg-[url('images/bg-intro-desktop.svg')] md:max-w-1/2 md:translate-y-10">
@@ -183,7 +183,7 @@
       </ul>
     </section>
   </main>
-  <footer class="w-full flex flex-col bg-brand-blue-950">
+  <footer class="w-full flex flex-col bg-brand-blue-950"  role="contentinfo">
     <div class="flex flex-col gap-4 justify-center items-center p-8 md:flex-row md:justify-evenly md:items-stretch">
       <div class="flex flex-col justify-center items-center gap-4 md:justify-evenly">
         <img src="images/logo-light.svg" alt="digital bank logo">
