@@ -2,7 +2,6 @@
 const navbarBtn = document.getElementById('navbar-btn');
 const navbar = document.getElementById('navbar');
 const overlay = document.getElementById('overlay');
-const main = document.querySelector('main');
 
 navbarBtn.addEventListener('click', () => {
   const isExpanded = navbarBtn.getAttribute('aria-expanded') === 'true';
