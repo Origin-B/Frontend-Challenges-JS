@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/output.css">
+  <title>Tip Calculator App || HTML & TailwindCSS & vanilla JS</title>
+</head>
+
+<body
+  class="min-h-screen flex flex-col justify-center items-center gap-4 bg-b-Grey-200 text-b-Grey-500 text-xs capitalize font-SpaceMono">
+  <header class="w-full p-6 flex items-center justify-center">
+    <img src="./src/images/logo.svg" alt="tip calculator app logo">
+  </header>
+  <main
+    class="w-full md:w-[80%] lg:w-[60%] rounded-t-2xl md:rounded-2xl grid md:grid-cols-2 gap-8 justify-center p-6 bg-b-White">
+    <form class="w-full flex flex-col gap-8 caret-b-Green-400">
+      <div class="group flex flex-wrap gap-2 justify-between">
+        <label for="bill" class="text-b-Grey-500">bill</label>
+        <p class="hidden group-[.warn]:block text-sm normal-case text-red-500" id="bill-warn"></p>
+        <div
+          class="w-full p-4 rounded-md flex items-center justify-between text-b-Green-900 text-2xl font-bold bg-b-Grey-50 cursor-pointer hover:outline-2 hover:outline-b-Green-400">
+          <img src="./src/images/icon-dollar.svg" alt="icon dollar" class="w-fit">
+          <input type="text" name="bill-quantity" id="bill" placeholder="0"
+            class="w-[90%] text-right focus:outline-none cursor-pointer">
+        </div>
+      </div>
+      <div class="group flex flex-wrap gap-2 justify-between">
+        <h2 class="text-b-Grey-500">Select Tip %</h2>
+        <p class="hidden group-[.warn]:block text-sm normal-case text-red-500" id="select-warn"></p>
+        <div
+          class="w-full grid grid-cols-2 md:grid-cols-3 gap-4 items-center text-center text-b-Grey-50 text-2xl font-bold"
+          id="select-tip-pre">
+          <span class="p-2 rounded-md bg-b-Green-900 cursor-pointer transition hover:bg-b-Green-400/50
+            hover:text-b-Green-900">
+            5%
+          </span>
+          <span class="p-2 rounded-md bg-b-Green-900 cursor-pointer transition hover:bg-b-Green-400/50
+            hover:text-b-Green-900">
+            10%
+          </span>
+          <span class="p-2 rounded-md bg-b-Green-900 cursor-pointer transition hover:bg-b-Green-400/50
+            hover:text-b-Green-900">
+            15%
+          </span>
+          <span class="p-2 rounded-md bg-b-Green-900 cursor-pointer transition hover:bg-b-Green-400/50
+            hover:text-b-Green-900">
+            25%
+          </span>
+          <span class="p-2 rounded-md bg-b-Green-900 cursor-pointer transition hover:bg-b-Green-400/50
+            hover:text-b-Green-900">
+            50%
+          </span>
+          <input type="text" name=""
+            class="p-3 rounded-md text-b-Green-900 placeholder:text-b-Grey-500 font-bold text-right text-2xl bg-b-Grey-50 cursor-pointer transition focus:outline-b-Green-400 hover:outline-2 hover:outline-b-Green-400"
+            placeholder="Custom">
+        </div>
+      </div>
+      <div class="group flex flex-wrap justify-between gap-1">
+        <label for="people-num" class="text-b-Grey-500">Number of People</label>
+        <p class="hidden group-[.warn]:block text-sm normal-case text-red-500" id="people-num-warn"></p>
+        <div
+          class="w-full p-4 rounded-md flex items-center justify-between text-b-Green-900 text-2xl font-bold bg-b-Grey-50 cursor-pointer hover:outline-2 hover:outline-b-Green-400">
+          <img src="./src/images/icon-person.svg" alt="icon person" class="w-fit">
+          <input type="text" name="people-num" id="people-num" placeholder="0"
+            class="w-[90%] text-right focus:outline-none cursor-pointer">
+        </div>
+      </div>
+    </form>
+    <section class="w-full p-8 rounded-2xl flex-1 flex flex-col gap-4 bg-b-Green-900">
+      <div class="flex-1 flex flex-col gap-6">
+        <p class="w-full grid grid-cols-2 grid-rows-2 items-center">
+          <span class="text-b-White">Tip Amount</span>
+          <span class="text-xs text-b-Grey-200">/ person</span>
+          <span class="col-start-2 row-start-1 row-span-2 text-right text-4xl text-b-Green-400 font-bold"
+            id="tip">$0.00</span>
+        </p>
+        <p class="w-full grid grid-cols-2 grid-rows-2 items-center">
+          <span class="text-b-White">Total</span>
+          <span class="text-xs text-b-Grey-200">/ person</span>
+          <span class="col-start-2 row-start-1 row-span-2 text-right text-4xl text-b-Green-400 font-bold"
+            id="total">$0.00</span>
+        </p>
+      </div>
+      <input type="submit" value="Reset"
+        class="w-full p-2 rounded-md text-b-Green-900 text-2xl font-bold bg-b-Green-400/20 cursor-pointer transition hover:bg-b-Grey-200/90 justify-end">
+    </section>
+  </main>
+  <footer class="w-full flex items-center justify-center gap-2 p-2 text-[11px] md:text-lg">
+    <img src="./src/images/Logo.jpeg" alt="OriginB Official Logo" class="rounded-full w-8">
+    <p>
+      Coded by
+      <a href="https://github.com/Origin-B" target="_blank" rel="noopener noreferrer"
+        class="text-b-Green-900 font-bold transition-colors hover:text-b-Green-400">
+        OriginB
+      </a>.
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer"
+        class="text-b-Green-900 font-bold transition-colors hover:text-b-Green-400">
+        Frontend Mentor
+      </a>.
+    </p>
+  </footer>
+  <script src="./src/index.js"></script>
+</body>
+
+</html>

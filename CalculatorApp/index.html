@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/output.css">
+  <title>Calculator App || HTML & TailwindCSS & Vanilla JS</title>
+</head>
+
+<body class="min-h-screen flex flex-col gap-4 justify-center items-center p-4 text-C-mainText font-League bg-C-mainBg">
+
+  <main class="w-full sm:w-4/5 md:w-1/2 p-4 flex flex-col gap-4">
+    <section class="flex justify-between text-C-mainText">
+      <h1 class="flex-1 text-3xl font-bold">calc</h1>
+
+      <div class="w-35 grid grid-cols-2 grid-rows-2 text-sm">
+        <h2 class="row-span-2 uppercase flex items-end">theme</h2>
+
+        <div class="flex justify-around items-end text-xs" id="theme-num-list">
+          <span class="cursor-pointer hover:text-C-mainText/80">1</span>
+          <span class="cursor-pointer hover:text-C-mainText/80">2</span>
+          <span class="cursor-pointer hover:text-C-mainText/80">3</span>
+        </div>
+
+        <div class="p-1 rounded-full bg-C-kPTog">
+          <span class="block w-4 h-4 rounded-full bg-C-eqTo-KeBg transition cursor-pointer hover:bg-C-eqTo-keBg/80"
+            id="theme"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full h-18 p-4 rounded-md text-3xl text-C-mainText text-right font-bold bg-C-screen" id="screen">
+    </section>
+
+    <section
+      class="w-full p-4 rounded-md flex flex-wrap flex-row-reverse gap-2.5 justify-between text-3xl text-C-KeT bg-C-kPTog"
+      id="keypad">
+      <button
+        class="w-[calc(25%-10px)] p-3 rounded-md uppercase text-base text-C-deleRes-text bg-C-deleRes-KeBg shadow-[0_4px_0_0_var(--deleRes-kSd)] transition-colors cursor-pointer hover:bg-C-deleRes-KeBg/80"
+        type="button">del</button>
+
+      <button
+        class="w-[calc(25%-10px)] p-3 rounded-md bg-C-mainKeBg shadow-[0_4px_0_0_var(--main-kSd)] transition-colors cursor-pointer hover:bg-C-mainKeBg/80"
+        type="button">9</button>
+
+      <button
+        class="w-[calc(25%-10px)] p-3 rounded-md bg-C-mainKeBg shadow-[0_4px_0_0_var(--main-kSd)] transition-colors cursor-pointer hover:bg-C-mainKeBg/80"
+        type="button">8</button>
+
+      <button
+        class="w-[calc(25%-10px)] p-3 rounded-md bg-C-mainKeBg shadow-[0_4px_0_0_var(--main-kSd)] transition-colors cursor-pointer hover:bg-C-mainKeBg/80"
+        type="button">7</button>
+
+      <button
+        class="w-[calc(25%-10px)] p-3 rounded-md bg-C-mainKeBg shadow-[0_4px_0_0_var(--main-kSd)] transition-colors cursor-pointer hover:bg-C-mainKeBg/80"
+        type="button">+</button>
+
+      <button
+        class="w-[calc(25%-10px)] p-3 rounded-md bg-C-mainKeBg shadow-[0_4px_0_0_var(--main-kSd)] transition-colors cursor-pointer hover:bg-C-mainKeBg/80"
+        type="button">6</button>
+
+      <button
+        class="w-[calc(25%-10px)] p-3 rounded-md bg-C-mainKeBg shadow-[0_4px_0_0_var(--main-kSd)] transition-colors cursor-pointer hover:bg-C-mainKeBg/80"
+        type="button">5</button>
+
+      <button
+        class="w-[calc(25%-10px)] p-3 rounded-md bg-C-mainKeBg shadow-[0_4px_0_0_var(--main-kSd)] transition-colors cursor-pointer hover:bg-C-mainKeBg/80"
+        type="button">4</button>
+
+      <button
+        class="w-[calc(25%-10px)] p-3 rounded-md bg-C-mainKeBg shadow-[0_4px_0_0_var(--main-kSd)] transition-colors cursor-pointer hover:bg-C-mainKeBg/80"
+        type="button">-</button>
+
+      <button
+        class="w-[calc(25%-10px)] p-3 rounded-md bg-C-mainKeBg shadow-[0_4px_0_0_var(--main-kSd)] transition-colors cursor-pointer hover:bg-C-mainKeBg/80"
+        type="button">3</button>
+
+      <button
+        class="w-[calc(25%-10px)] p-3 rounded-md bg-C-mainKeBg shadow-[0_4px_0_0_var(--main-kSd)] transition-colors cursor-pointer hover:bg-C-mainKeBg/80"
+        type="button">2</button>
+
+      <button
+        class="w-[calc(25%-10px)] p-3 rounded-md bg-C-mainKeBg shadow-[0_4px_0_0_var(--main-kSd)] transition-colors cursor-pointer hover:bg-C-mainKeBg/80"
+        type="button">1</button>
+
+      <button
+        class="w-[calc(25%-10px)] p-3 rounded-md bg-C-mainKeBg shadow-[0_4px_0_0_var(--main-kSd)] transition-colors cursor-pointer hover:bg-C-mainKeBg/80"
+        type="button">x</button>
+
+      <button
+        class="w-[calc(25%-10px)] p-3 rounded-md bg-C-mainKeBg shadow-[0_4px_0_0_var(--main-kSd)] transition-colors cursor-pointer hover:bg-C-mainKeBg/80"
+        type="button">/</button>
+
+      <button
+        class="w-[calc(25%-10px)] p-3 rounded-md bg-C-mainKeBg shadow-[0_4px_0_0_var(--main-kSd)] transition-colors cursor-pointer hover:bg-C-mainKeBg/80"
+        type="button">0</button>
+
+      <button
+        class="w-[calc(25%-10px)] p-3 rounded-md bg-C-mainKeBg shadow-[0_4px_0_0_var(--main-kSd)] transition-colors cursor-pointer hover:bg-C-mainKeBg/80"
+        type="button">.</button>
+
+      <button
+        class="w-[calc(50%-10px)] p-3 rounded-md text-C-eq-text bg-C-eqTo-KeBg shadow-[0_4px_0_0_var(--eqTo-key-sd)] transition-colors cursor-pointer hover:bg-C-eqTo-KeBg/80"
+        type="button">=</button>
+
+      <button
+        class="w-[calc(50%-10px)] p-3 rounded-md uppercase text-base text-C-deleRes-text bg-C-deleRes-KeBg shadow-[0_4px_0_0_var(--deleRes-kSd)] transition-colors cursor-pointer hover:bg-C-deleRes-KeBg/80"
+        type="button">reset</button>
+    </section>
+  </main>
+  <footer class="flex items-center justify-center gap-2 text-xs sm:text-sm">
+    <img src="./src/images/Logo.jpeg" alt="OriginB Official Logo" class="rounded-full w-9">
+    <p>
+      Coded by
+      <a href="https://github.com/Origin-B" target="_blank" rel="noopener noreferrer"
+        class="text-C-eqTo-KeBg font-semibold transition-colors hover:text-C-deleRes-KeBg">
+        OriginB
+      </a>.
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer"
+        class="text-C-eqTo-KeBg font-semibold transition-colors hover:text-C-deleRes-KeBg">
+        Frontend Mentor
+      </a>.
+    </p>
+  </footer>
+  <script src="./src/index.js"></script>
+</body>
+
+</html>

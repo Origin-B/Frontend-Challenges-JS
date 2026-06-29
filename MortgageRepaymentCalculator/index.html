@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <title>Mortgage Repayment Calculator || HTML & TailwindCSS & Vanilla JS</title>
+
+</head>
+
+<body
+  class="min-h-screen flex flex-col gap-4 items-center justify-center text-b-Slate-700 font-PlusJakarta font-medium bg-b-Slate-100 sm:p-4">
+
+  <main
+    class="min-h-screen w-full lg:w-4/5 sm:min-h-fit grid gap-4 md:grid-cols-2 md:rounded-2xl bg-b-White md:overflow-hidden">
+
+    <section class="flex flex-col gap-8 p-8">
+      <article class="flex flex-wrap justify-between items-center gap-2">
+        <h1 class="w-full sm:w-fit text-2xl text-b-Slate-900 font-bold">Mortgage Calculator</h1>
+        <p class="underline cursor-pointer transition-colors hover:text-b-Slate-900" id="clear-all">
+          Clear All
+        </p>
+      </article>
+
+      <form class="flex flex-col gap-8 caret-b-Slate-900">
+        <div class="group flex flex-col gap-2">
+          <label for="mortgage-amount">Mortgage Amount</label>
+          <p
+            class="group-[.warn]:border-b-Red flex justify-between border-2 border-b-Slate-700 rounded-md cursor-pointer transition-colors overflow-hidden hover:border-b-Slate-900">
+            <span
+              class="group-[.warn]:bg-b-Red group-[.warn]:text-b-White w-10 p-3 text-center font-bold bg-b-Slate-100">£</span>
+            <input type="text" name="mortgage-amount" id="mortgage-amount"
+              class="flex-1 p-3 text-b-Slate-900 font-bold indent-2.5 cursor-pointer focus:outline-none">
+          </p>
+          <p class="hidden group-[.warn]:block text-b-Red" id="amount-warn"></p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-4">
+
+          <div class="group flex flex-col gap-2">
+            <label for="mortgage-term">Mortgage Term</label>
+            <p
+              class="group-[.warn]:border-b-Red flex justify-between border-2 border-b-Slate-700 rounded-md cursor-pointer transition-colors overflow-hidden hover:border-b-Slate-900">
+              <input type="text" name="mortgage-term" id="mortgage-term"
+                class="w-full p-3 text-b-Slate-900 font-bold indent-2.5 focus:outline-none">
+              <span
+                class="group-[.warn]:bg-b-Red group-[.warn]:text-b-White w-18 p-3 font-bold bg-b-Slate-100">years</span>
+            </p>
+            <p class="hidden group-[.warn]:block text-b-Red" id="term-warn"></p>
+          </div>
+          <div class="group flex flex-col gap-2">
+            <label for="interest-rate">Interest Rate</label>
+            <p
+              class="group-[.warn]:border-b-Red flex justify-between border-2 border-b-Slate-700 rounded-md cursor-pointer transition-colors overflow-hidden hover:border-b-Slate-900">
+              <input type="text" name="interest-rate" id="interest-rate"
+                class="w-full p-3 text-b-Slate-900 font-bold indent-2.5 focus:outline-none">
+              <span
+                class="group-[.warn]:bg-b-Red group-[.warn]:text-b-White w-13 p-3 text-center font-bold bg-b-Slate-100">%</span>
+            </p>
+            <p class="hidden group-[.warn]:block text-b-Red" id="rate-warn"></p>
+          </div>
+        </div>
+        <div class="group flex flex-col gap-2">
+
+          <p>Mortgage Type</p>
+          <label
+            class="flex items-center gap-4 p-4 border border-slate-300 rounded-md cursor-pointer transition-all duration-200 hover:border-lime-500 relative has-checked:border-lime-500 has-checked:bg-lime-50">
+            <input type="radio" name="mortgage-type" value="repayment" class="sr-only peer" />
+
+            <div
+              class="w-5 h-5 border-2 border-b-Slate-700 rounded-full peer-checked:border-b-Lime peer-checked:bg-b-Lime shadow-[inset_0_0_0_3px_var(--color-b-White)]">
+            </div>
+
+            <span class=" font-bold text-slate-900 z-10">Repayment</span>
+          </label>
+
+          <label
+            class="flex items-center gap-4 p-4 border border-slate-300 rounded-md cursor-pointer transition-all duration-200 hover:border-lime-500 relative has-checked:border-lime-500 has-checked:bg-lime-50">
+            <input type="radio" name="mortgage-type" value="interest-only" class="sr-only peer" />
+            <div
+              class="w-5 h-5 border-2 border-b-Slate-700 rounded-full peer-checked:border-b-Lime peer-checked:bg-b-Lime shadow-[inset_0_0_0_3px_var(--color-b-White)]">
+            </div>
+
+            <span class=" font-bold text-slate-900 z-10">Interest Only</span>
+          </label>
+          <p class="hidden group-[.warn]:block text-b-Red" id="type-warn"></p>
+        </div>
+      </form>
+
+      <button type="button" id="calc-repay"
+        class="w-full lg:w-4/5 flex gap-2 justify-center p-4 rounded-full text-b-Slate-900 font-bold bg-b-Lime cursor-pointer transition-colors hover:bg-b-Lime/80">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path fill="#122f3f"
+            d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5 1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 15a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75v3.75Z" />
+        </svg>
+        <span>Calculate Repayments</span>
+      </button>
+    </section>
+
+    <section class="group p-8 md:rounded-bl-[60px] bg-b-Slate-900/95" id="show-results">
+      <article
+        class="group-[.active]:hidden w-full h-full flex flex-col gap-6 justify-center items-center text-center text-b-Slate-300">
+        <img src="./src/images/illustration-empty.svg" alt="illustration empty">
+        <h2 class="text-xl text-b-White">
+          Results shown here
+        </h2>
+        <p>
+          Complete the form and click “calculate repayments” to see what
+          your monthly repayments would be.
+        </p>
+      </article>
+
+      <article class="hidden group-[.active]:flex w-full h-full flex-col gap-8 text-b-Slate-300">
+        <h2 class="text-xl text-b-White">
+          Your results
+        </h2>
+
+        <p>
+          Your results are shown below based on the information you provided.
+          To adjust the results, edit the form and click “calculate repayments” again.
+        </p>
+
+        <div class="border-t-3 border-t-b-Lime rounded-md px-4 divide-y divide-b-Slate-700 bg-b-Slate-900">
+          <p class="py-4 flex flex-col gap-2">
+            <span>Your monthly repayments</span>
+            <span class="text-b-Lime text-4xl font-bold" id="monthly-repay"></span>
+          </p>
+          <p class="py-4 flex flex-col gap-2">
+            <span>Total you'll repay over the term</span>
+            <span class="text-2xl text-b-White font-bold" id="total-repay"></span>
+          </p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+  <footer class="hidden md:flex items-center justify-center gap-2 text-xs sm:text-sm">
+    <img src="./src/images/Logo.jpeg" alt="OriginB Official Logo" class="rounded-full w-9">
+    <p>
+      Coded by
+      <a href="https://github.com/Origin-B" target="_blank" rel="noopener noreferrer"
+        class="text-b-Slate-900 font-semibold transition-colors hover:text-b-Slate-700">
+        OriginB
+      </a>.
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer"
+        class="text-b-Slate-900 font-semibold transition-colors hover:text-b-Slate-700">
+        Frontend Mentor
+      </a>.
+    </p>
+  </footer>
+  <script src="./src/index.js"></script>
+</body>
+
+</html>

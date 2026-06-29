@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/output.css">
+  <title>Expenses Chart Component || HTML & TailWindCSS & Vanilla JS</title>
+</head>
+
+<body
+  class="min-h-screen p-4 flex gap-4 flex-col justify-center items-center text-Brown-400 font-dm text-lg bg-Red-100">
+  <main class="w-full max-w-125 flex flex-col gap-4">
+    <section class="p-4 rounded-xl flex justify-between bg-Red-500">
+      <div>
+        <p> My balance</p>
+        <span class="font-bold text-2xl text-white"> $921.48 </span>
+      </div>
+      <img src="./src/images/logo.svg" alt="expenses chart component logo">
+    </section>
+    <section class="flex-1 flex flex-col gap-6 p-4 rounded-xl bg-white">
+      <p class="text-Brown-950 text-2xl font-bold ">Spending - Last 7 days</p>
+      <div class="py-4 border-b border-Brown-400 flex justify-between items-end h-48" id="flowchart">
+      </div>
+      </div>
+      <div class="flex justify-between items-end ">
+        <div class="flex flex-col gap-1">
+          <span class="text-sm">Total this month</span>
+          <span class="text-4xl text-Brown-950 font-bold">$478.33</span>
+        </div>
+        <div class="flex flex-col items-end">
+          <span class=" text-Brown-950 font-bold">+2.4%</span>
+          <span class="text-sm">from last month</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="flex items-center justify-center gap-2 p-4 text-[11px] sm:text-base">
+    <img src="./src/images/Logo.jpeg" alt="OriginB Official Logo" class="rounded-full w-9">
+    <p>
+      Coded by
+      <a href="https://github.com/Origin-B" target="_blank"
+        class="text-Red-500 font-bold transition-colors hover:text-Blue-300">
+        OriginB
+      </a>.
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        class="text-Red-500 font-bold transition-colors hover:text-Blue-300">
+        Frontend Mentor
+      </a>.
+    </p>
+  </footer>
+  <script src="./src/index.js"></script>
+</body>
+
+</html>
